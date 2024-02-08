@@ -11,21 +11,24 @@
 
 <body>
     <header>
-        <div class="hero min-h-screen ">
-            <div class="hero-content flex-col lg:flex-row-reverse ">
-                <img src="images/Summer 1.png" class="max-w-sm rounded-lg shadow-2xl" />
-                <div>
-                    <h1 class="text-4xl mb-4">---SALE FEVER---</h1>
-                    <h1 class="text-4xl font-bold ">Purchase TK 200 or</h1>
-                    <h1 class="text-4xl font-bold mb-6">above & get <span class="text-pink-600">20% off</span></h1>
-                    <span  class="flex items-center">
-                        <p class="py-6 text-2xl">Use Promo Code</p>
-                        <button class="btn btn-secondary ">SELL200</button>
+        <div class="hero min-h-screen bg-orange-100">
+            <div class="hero-content flex flex-col lg:flex-row-reverse items-center justify-center">
+                <img src="images/Summer 1.png" class="lg:max-w-sm rounded-lg shadow-2xl mb-6 lg:mb-0 lg:mr-6" />
+                <div class="text-center lg:text-left">
+                    <h1 class="text-2xl lg:text-4xl mb-4">---SALE FEVER---</h1>
+                    <h1 class="text-2xl lg:text-4xl font-bold mb-2">Purchase TK 200 or</h1>
+                    <h1 class="text-2xl lg:text-4xl font-bold mb-6">above & get <span class="text-pink-600">20%
+                            off</span></h1>
+                    <span class="flex flex-col lg:flex-row items-center lg:items-start gap-4">
+                        <p class="py-2 lg:py-0 text-lg lg:text-2xl font-semibold">Use Promo Code</p>
+                        <button class="btn btn-secondary text-base lg:text-lg">SELL200</button>
                     </span>
                 </div>
             </div>
         </div>
     </header>
+
+
 
     <!-- main  section -->
     <main class="mb-8 mt-8">
@@ -33,17 +36,20 @@
             <marquee class="font-semibold text-2xl text-orange-600" behavior="" direction="">Get Our Summer Offer 20%
                 Discount Use Cupon</marquee>
         </section>
-        <div class="drawer lg:drawer-open">
+
+
+        <div class="drawer lg:drawer-open ">
             <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content flex flex-col">
                 <!-- Page content here -->
                 <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden"></label>
 
-                <!-- cards section -->
-
+                <!-- cards section one -->
                 <h1 class="font-semibold m-4 text-2xl">Kitchenware</h1>
-                <div class="grid grid-cols-3 gap-2  justify-items-center">
-                    <div class="card w-80 bg-base-100 shadow-xl">
+                <div id="kitchenware-items"
+                    class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2  justify-items-center md:grid-cols-2 sm:grid-cols-1">
+
+                    <div id="kitchenware-item-one" class="card w-80 bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -55,12 +61,13 @@
                                 <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 class="card-title">K. Accessories</h2>
-                            <p>39.00 tk</p>
+                            <h2 id="KitchenAccessories" class="card-title">Kitchen Accessories</h2>
+                            <p> <span id="KitchenAccessoriesPrice">39.00</span> tk</p>
 
                         </div>
                     </div>
-                    <div class="card w-80 bg-base-100 shadow-xl">
+
+                    <div id="kitchenware-item-two" class="card w-80 bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="images/prod2.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -72,12 +79,13 @@
                                 <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 class="card-title">K. Accessories</h2>
-                            <p>25.00 tk</p>
+                            <h2 id="K-accessories" class="card-title">K. Accessories</h2>
+                            <p><span id="K-accessoriesPrice">25.00</span> tk</p>
 
                         </div>
                     </div>
-                    <div class="card w-80 bg-base-100 shadow-xl">
+
+                    <div id="kitchenware-item-three" class="card w-80 bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="images/prod3.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -89,17 +97,18 @@
                                 <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 class="card-title">Home Cooker</h2>
-                            <p>45.00 tk</p>
+                            <h2 id="HomeCooker" class="card-title">Home Cooker</h2>
+                            <p ><span id="HomeCookerPrice">45.00</span> tk</p>
 
                         </div>
                     </div>
                 </div>
 
-
+                <!-- cards section two -->
                 <h1 class="font-semibold m-4 text-2xl">Sportsware</h1>
-                <div class="grid grid-cols-3 gap-2  justify-items-center">
-                    <div class="card w-80 bg-base-100 shadow-xl">
+                <div id="Sportsware-items" class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2  justify-items-center">
+
+                    <div id="sportsware-item-one" class="card w-80 bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="images/prod4.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -116,7 +125,8 @@
 
                         </div>
                     </div>
-                    <div class="card w-80 bg-base-100 shadow-xl">
+
+                    <div id="sportsware-item-two" class="card w-80 bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="images/prod5.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -133,7 +143,8 @@
 
                         </div>
                     </div>
-                    <div class="card w-80 bg-base-100 shadow-xl">
+
+                    <div id="sportsware-item-three" class="card w-80 bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="images//prod6.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -152,10 +163,11 @@
                     </div>
                 </div>
 
-
+                <!-- cards section three -->
                 <h1 class="font-semibold m-4 text-2xl">Furniture</h1>
-                <div class="grid grid-cols-3 gap-2  justify-items-center">
-                    <div class="card w-80 bg-base-100 shadow-xl">
+                <div id="furniture-items" class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2  justify-items-center">
+
+                    <div id="furniture-items-one" class="card w-80 bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="images/prod7.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -172,7 +184,8 @@
 
                         </div>
                     </div>
-                    <div class="card w-80 bg-base-100 shadow-xl">
+
+                    <div id="furniture-item-two" class="card w-80 bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="images/prod8.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -189,17 +202,18 @@
 
                         </div>
                     </div>
-                    <div class="card w-80 bg-base-100 shadow-xl">
+
+                    <div id="furniture-item-three" class="card w-80 bg-base-100 shadow-xl">
                         <figure class="px-10 pt-10">
                             <img src="images/prod9.png" alt="Shoes" class="rounded-xl" />
                         </figure>
                         <div class="card-body items-center text-center">
                             <div class="rating rating-sm">
-                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
-                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title">Flexiable Sofa</h2>
                             <p>4880.00 tk</p>
@@ -209,10 +223,24 @@
                 </div>
             </div>
 
-            <div class="drawer-side">
+            <div class="drawer-side md:bg-base-100">
                 <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
                 <ul class="menu p-4 w-80 min-h-full  text-base-content">
-                    <h1>Calculate</h1>
+                    <h1 class="mb-4 font-semibold">Use coupon </h1>    
+                                 <div class="flex items-center gap-4 mb-5">
+                        <input id="discountCouponField" type="text" placeholder="Type here"
+                            class="input input-bordered input-secondary w-full max-w-xs" />
+                        <button id="discountBtn" class="btn btn-secondary" disabled>Apply</button>
+                    </div>
+                    <div id="displayProduct" class="mb-5">
+                         
+                    </div>
+                    <!-- price section -->
+                    <div>
+                        <p>Total price : <span id="totalPrice"></span></p>
+                        <p>Discount : <span  id="discount"></span></p>
+                        <p>price: <span id="afterDiscountPrice"></span></p>
+                    </div>
                 </ul>
 
             </div>
@@ -258,6 +286,7 @@
 
 
     <!-- javascript link -->
+    <script src="js/utilites.js"></script>
     <script src="js/summersale.js"></script>
 </body>
 
