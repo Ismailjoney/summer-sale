@@ -1,3 +1,43 @@
+//input value (apply button)
+document.getElementById('discountCouponField').addEventListener('keyup', function (event) {
+
+    const inputValue = event.target.value;
+    getDiscountCouponInputValue(inputValue, 'discountBtnId')
+     
+})
+
+
+document.getElementById('discountBtnId').addEventListener('click', function () {
+
+    const targetTotalPriceId = document.getElementById('totalPrice')
+    const targetTotalPriceIdString = targetTotalPriceId.innerText;
+    const targetTotalPriceIdNumber = parseFloat(targetTotalPriceIdString)
+
+   
+    if (isNaN(targetTotalPriceIdNumber)) {
+
+        const afterDiscountPriceId = document.getElementById('afterDiscountPrice')
+        afterDiscountPriceId.innerText = ` 00`
+
+        const targetDiscountId = document.getElementById('discount')
+        targetDiscountId.innerText = `00`;
+    }
+    else {
+        const getTwentyPersentOffer = targetTotalPriceIdNumber * 20 / 100;
+
+        const targetDiscountId = document.getElementById('discount')
+        targetDiscountId.innerText = getTwentyPersentOffer;
+        const disCountNumber = parseFloat(getTwentyPersentOffer)
+
+        const finalTotalNumber = targetTotalPriceIdNumber - disCountNumber;
+
+        const afterDiscountPriceId = document.getElementById('afterDiscountPrice')
+        afterDiscountPriceId.innerText = finalTotalNumber
+    }
+ 
+})
+
+ 
 // kitchen accessories
 document.getElementById('kitchenware-item-one').addEventListener('click', function () {
 
@@ -12,34 +52,12 @@ document.getElementById('kitchenware-item-one').addEventListener('click', functi
     const setAllItemPriceSum = sumAllItemsTotal(cardItemPrice)
 
     //set total price :
-    const sumAllItemsPrice = setTotalPrice(setAllItemPriceSum)
+    setTotalPrice(setAllItemPriceSum)
 })
 
-//input value (apply button)
-document.getElementById('discountCouponField').addEventListener('keyup', function (event) {
 
-    const inputValue = event.target.value;
-    getDiscountCouponInputValue(inputValue, 'discountBtnId')
-})
 
-document.getElementById('discountBtnId').addEventListener('click', function () {
 
-    const cardItemPrice = getCardPriceById('KitchenAccessoriesPrice')
-    const setAllItemPriceSum = sumAllItemsTotal(cardItemPrice)
-    const setTotalSumAllItemsPrice = setTotalPrice(setAllItemPriceSum)
-
-    const getTwentyPersentOffer = setTotalSumAllItemsPrice * 20 / 100;
-
-    const targetDiscountId = document.getElementById('discount')
-    targetDiscountId.innerText = getTwentyPersentOffer;
-    const disCountNumber = parseFloat(getTwentyPersentOffer)
-
-    const finalTotalNumber = setTotalSumAllItemsPrice - disCountNumber;
-
-    const afterDiscountPriceId = document.getElementById('afterDiscountPrice')
-    afterDiscountPriceId.innerText = finalTotalNumber
-
-})
 
 document.getElementById('kitchenware-item-two').addEventListener('click', function () {
 
@@ -54,10 +72,7 @@ document.getElementById('kitchenware-item-two').addEventListener('click', functi
     const setAllItemPriceSum = sumAllItemsTotal(cardItemPrice)
 
     //set total price :
-    const sumAllItemsPrice = setTotalPrice(setAllItemPriceSum)
-
-
-
+    setTotalPrice(setAllItemPriceSum)
 })
 
 document.getElementById('kitchenware-item-three').addEventListener('click', function () {
@@ -73,7 +88,7 @@ document.getElementById('kitchenware-item-three').addEventListener('click', func
     const setAllItemPriceSum = sumAllItemsTotal(cardItemPrice)
 
     //set total price :
-     setTotalPrice(setAllItemPriceSum)
+    setTotalPrice(setAllItemPriceSum)
 })
 
 document.getElementById('sportsware-item-one').addEventListener('click', function () {
@@ -87,10 +102,9 @@ document.getElementById('sportsware-item-one').addEventListener('click', functio
 
     //sum all item price :
     const setAllItemPriceSum = sumAllItemsTotal(cardItemPrice)
-    // console.log(setAllItemPriceSum)
 
     //set total price :
-     setTotalPrice(setAllItemPriceSum)
+    setTotalPrice(setAllItemPriceSum)
 })
 
 document.getElementById('sportsware-item-two').addEventListener('click', function () {
@@ -104,10 +118,9 @@ document.getElementById('sportsware-item-two').addEventListener('click', functio
 
     //sum all item price :
     const setAllItemPriceSum = sumAllItemsTotal(cardItemPrice)
-    // console.log(setAllItemPriceSum)
 
     //set total price :
-     setTotalPrice(setAllItemPriceSum)
+    setTotalPrice(setAllItemPriceSum)
 })
 
 document.getElementById('sportsware-item-three').addEventListener('click', function () {
@@ -121,11 +134,10 @@ document.getElementById('sportsware-item-three').addEventListener('click', funct
 
     //sum all item price :
     const setAllItemPriceSum = sumAllItemsTotal(cardItemPrice)
-    // console.log(setAllItemPriceSum)
 
     //set total price :
-     setTotalPrice(setAllItemPriceSum)
- 
+    setTotalPrice(setAllItemPriceSum)
+
 })
 
 document.getElementById('furniture-items-one').addEventListener('click', function () {
@@ -139,14 +151,13 @@ document.getElementById('furniture-items-one').addEventListener('click', functio
 
     //sum all item price :
     const setAllItemPriceSum = sumAllItemsTotal(cardItemPrice)
-    // console.log(setAllItemPriceSum)
 
     //set total price :
-     setTotalPrice(setAllItemPriceSum)
- 
+    setTotalPrice(setAllItemPriceSum)
+
 })
 
-document.getElementById('furniture-item-two').addEventListener('click', function(){
+document.getElementById('furniture-item-two').addEventListener('click', function () {
 
     const cardItemName = getCardNameById('childrenPlayId')
     const cardItemPrice = getCardPriceById('childrenPlayPriceId')
@@ -157,13 +168,12 @@ document.getElementById('furniture-item-two').addEventListener('click', function
 
     //sum all item price :
     const setAllItemPriceSum = sumAllItemsTotal(cardItemPrice)
-    // console.log(setAllItemPriceSum)
 
     //set total price :
-     setTotalPrice(setAllItemPriceSum)
- 
+    setTotalPrice(setAllItemPriceSum)
+
 })
- 
+
 document.getElementById('furniture-item-three').addEventListener('click', function () {
 
     const cardItemName = getCardNameById('flexiableSofaId')
@@ -175,8 +185,8 @@ document.getElementById('furniture-item-three').addEventListener('click', functi
 
     //sum all item price :
     const setAllItemPriceSum = sumAllItemsTotal(cardItemPrice)
-   
+
     //set total price :
-     setTotalPrice(setAllItemPriceSum)
- 
+    setTotalPrice(setAllItemPriceSum)
+
 })
